@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Movie Recommendation System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div class="page1" id="page1">
+    <div class="card">
+        <h2>🎬 Movie Recommendation</h2>
+
+        <label>Time Duration</label>
+        <select id="duration">
+            <option value="short">Less than 2 hours</option>
+            <option value="medium">2 - 3 hours</option>
+            <option value="long">More than 3 hours</option>
+        </select>
+
+        <label>Language</label>
+        <select id="language">
+            <option>English</option>
+            <option>Hindi</option>
+            <option>Tamil</option>
+            <option>Telugu</option>
+        </select>
+
+        <label>Subscription</label>
+        <select id="subscription">
+            <option>Free</option>
+            <option>Premium</option>
+        </select>
+
+        <button onclick="showMovies()">Get Recommendation</button>
+
+        <div class="result" id="result"></div>
+    </div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page2" id="page2">
+    <div class="details">
+        <h1 id="movieTitle"></h1>
+        <p id="movieInfo"></p>
+        <button onclick="goBack()">⬅ Back</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Background Image */
+body {
+    min-height: 100vh;
+    background: url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba")
+        no-repeat center/cover;
+    animation: zoom 20s infinite alternate;
+    color: #fff;
+}
+
+@keyframes zoom {
+    from { background-size: 100%; }
+    to { background-size: 110%; }
+}
+
+/* Dark Overlay */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    z-index: -1;
+}
+
+/* Pages */
+.page1, .page2 {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page2 {
+    display: none;
+}
+
+/* Card */
+.card {
+    background: rgba(17,24,39,0.95);
+    padding: 30px;
+    width: 380px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.6);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-top: 12px;
+    display: block;
+}
+
+select, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border-radius: 10px;
+    border: none;
+}
+
+select {
+    background: #020617;
+    color: #fff;
+}
+
+button {
+    margin-top: 18px;
+    background: #22c55e;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #16a34a;
+}
+
+/* Movie Grid */
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.movie-card {
+    height: 170px;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+.movie-card:hover {
+    transform: scale(1.08);
+}
+
+.movie-card span {
+    font-weight: bold;
+    z-index: 1;
+}
+
+/* Page 2 */
+.details {
+    background: rgba(15,23,42,0.95);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+}
